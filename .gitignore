@@ -9,4 +9,4 @@ bazel-out
 bazel-testlogs
 .ijwb
 
-bazel-
+bazel-*
