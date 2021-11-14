@@ -16,6 +16,13 @@ load("@rules_jvm_external//:defs.bzl", "maven_install")
 maven_install(
     artifacts = [
         "com.google.inject:guice:5.0.1",
+        "com.google.inject.extensions:guice-servlet:5.0.1",
+        "com.google.inject.extensions:guice-persist:5.0.1",
+
+        "org.eclipse.jetty:jetty-servlet:11.0.7",
+        "org.eclipse.jetty:jetty-server:11.0.7",
+        "org.eclipse.jetty:jetty-util:11.0.7",
+        "javax.servlet:javax.servlet-api:4.0.1",
 
         "org.apache.commons:commons-lang3:3.9",
         "junit:junit:4.13.2",
