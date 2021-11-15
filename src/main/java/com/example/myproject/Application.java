@@ -1,24 +1,22 @@
 package com.example.myproject;
 
-import com.example.myproject.service.UserService;
-import com.google.inject.Guice;
-import com.google.inject.Injector;
-
-import java.util.logging.Logger;
+import com.example.myproject.servlet.MyHtmlServlet;
+import com.example.myproject.servlet.MyUserServlet;
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.servlet.ServletContextHandler;
 
 public class Application {
 
-    private static final Logger logger = Logger.getAnonymousLogger();
-
     public static void main(String[] args) throws Exception {
-        Injector injector = Guice.createInjector();
-        UserService userService = injector.getInstance(UserService.class);
+        Server server = new Server(8080);
 
-        logger.info(userService.getInstance().toString());
+        ServletContextHandler handler = new ServletContextHandler(server,
+                "/", ServletContextHandler.SESSIONS);
 
-        // Server server = new Server(8080);
-        // // TODO how to invoke Injector and servlet
-        // server.start();
-        // server.join();
+        handler.addServlet(MyHtmlServlet.class, "*.html");
+        handler.addServlet(MyUserServlet.class, "/api/v1/user");
+
+        server.start();
     }
+
 }

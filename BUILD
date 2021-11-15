@@ -22,6 +22,7 @@ java_library(
         "@maven//:org_eclipse_jetty_jetty_server",
         "@maven//:org_eclipse_jetty_jetty_util",
         "@maven//:javax_servlet_javax_servlet_api",
+        "@maven//:jakarta_servlet_jakarta_servlet_api",
 
         "@maven//:org_apache_commons_commons_lang3",
     ]

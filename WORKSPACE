@@ -23,6 +23,7 @@ maven_install(
         "org.eclipse.jetty:jetty-server:11.0.7",
         "org.eclipse.jetty:jetty-util:11.0.7",
         "javax.servlet:javax.servlet-api:4.0.1",
+        "jakarta.servlet:jakarta.servlet-api:5.0.0",
 
         "org.apache.commons:commons-lang3:3.9",
         "junit:junit:4.13.2",
